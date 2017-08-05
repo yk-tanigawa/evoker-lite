@@ -8,6 +8,7 @@ import shutil
 from collections import defaultdict
 from argparse import ArgumentParser
 import logging
+#logging.basicConfig(level=logging.DEBUG)
 logging.basicConfig(level=logging.INFO)
 
 from intensity import TextIntensity, BinaryIntensity
@@ -150,9 +151,11 @@ class EvokerLite:
             fig = False
         else:
             if plot_sexes:
-                fig, ax = plt.subplots(1, 2, figsize=(20, 10))
+                #fig, ax = plt.subplots(1, 2, figsize=(20, 10))
+                fig, ax = plt.subplots(1, 2, figsize=(12, 6))
             else:
-                fig, ax = plt.subplots(figsize=(10, 10))
+                #fig, ax = plt.subplots(figsize=(10, 10))
+                fig, ax = plt.subplots(figsize=(6, 6))
         for m in genotype_mapping:
             code = m['code']
             if plot_sexes:
